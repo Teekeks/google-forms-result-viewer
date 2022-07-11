@@ -7,7 +7,6 @@ from aiohttp import web
 from os import path
 
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly']
-SAMPLE_SPREADSHEET_ID = '1jOx5irKuNEoCogUn4m90Q4vpp-6SKRZz8e-rODEgzhE'
 
 creds = service_account.Credentials.from_service_account_file('forms-viewer-825e7c854b9b.json', scopes=SCOPES)
 
