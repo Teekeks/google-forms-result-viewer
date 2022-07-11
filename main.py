@@ -18,7 +18,6 @@ app: web.Application = web.Application()
 jinja2_setup(app,
              context_processors=[],
              loader=jinja2.FileSystemLoader(str(path.join(path.dirname(__file__), 'templates/'))))
-app['static_root_folder'] = '/static'
 routes = web.RouteTableDef()
 
 
@@ -34,5 +33,4 @@ async def show_results(request: web.Request):
 
 
 app.add_routes(routes)
-app.add_routes([web.static('/static', 'static')])
 web.run_app(app, port=8081)
